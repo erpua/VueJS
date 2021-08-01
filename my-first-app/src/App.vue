@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Button>Click me</Button>
+    <!--     <h1>{{ amountClicks }}</h1> -->
+    <h1>{{ title }}</h1>
+    <!--     <Button v-on:click="amountClicks += 1">Click me</Button> -->
+    <Button @click="increment">Click me</Button>
   </div>
 </template>
 
@@ -11,6 +14,21 @@ export default {
   name: "App",
   components: {
     Button,
+  },
+  data() {
+    return {
+      amountClicks: 0,
+    };
+  },
+  computed: {
+    title() {
+      return `Amount of clicks ${this.amountClicks}`;
+    },
+  },
+  methods: {
+    increment() {
+      this.amountClicks += 1;
+    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:type="qwe">
+  <button v-on="$listeners" v-bind:type="qwe">
     <slot></slot>
   </button>
 </template>
