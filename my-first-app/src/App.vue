@@ -1,19 +1,22 @@
 <template>
-  <div id="app">
+  <div :id="$style.app">
     <!--     <h1>{{ amountClicks }}</h1> -->
     <h1>{{ title }}</h1>
     <!--     <Button v-on:click="amountClicks += 1">Click me</Button> -->
-    <Button @click="increment">Click me</Button>
+    <Button @click="increment" outlined>Click me</Button>
+    <DirectivesTest />
   </div>
 </template>
 
 <script>
 import Button from "./components/Button.vue";
+import DirectivesTest from "./components/DirectivesTest";
 
 export default {
   name: "App",
   components: {
     Button,
+    DirectivesTest,
   },
   data() {
     return {
@@ -33,7 +36,7 @@ export default {
 };
 </script>
 
-<style>
+<style module>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

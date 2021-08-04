@@ -1,5 +1,34 @@
 <template>
-  <button v-on="$listeners" v-bind:type="type" class="btn">
+  <!--  <button
+    v-on="$listeners"
+    v-bind:type="type"
+    class="btn btn--outlined"
+    style="opacity: 0.5"
+  >
+    <slot></slot>
+  </button> -->
+  <!-- <button v-on="$listeners" v-bind:type="type" class="btn btn--outlined">
+    <slot></slot>
+  </button> -->
+  <!--   <button
+    v-on="$listeners"
+    v-bind:type="type"
+    v-bind:class="['btn', 'btn--outlined']"
+  >
+    <slot></slot>
+  </button> -->
+  <!--  <button
+    v-on="$listeners"
+    v-bind:type="type"
+    :class="['btn', 'btn--outlined']"
+  >
+    <slot></slot>
+  </button> -->
+  <button
+    v-on="$listeners"
+    v-bind:type="type"
+    :class="{ btn: true, 'btn--outlined': outlined }"
+  >
     <slot></slot>
   </button>
 </template>
@@ -10,6 +39,10 @@ export default {
     type: {
       type: String,
       default: "button",
+    },
+    outlined: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -27,6 +60,12 @@ export default {
   min-width: 220px;
   border: 1px solid transparent;
   padding: 8px 15px;
+
+  &--outlined {
+    background: none;
+    border: 1px solid #ff662d;
+    color: #ff662d;
+  }
 }
 </style>
 
