@@ -3,8 +3,15 @@
     <span
       v-for="index in starLimit"
       :key="index"
-      class="star star--colored"
+      class="star star--outlined"
     ></span>
+    <div class="star-rating__colored" :style="`width: ${raitingWidth};`">
+      <span
+        v-for="index in starLimit"
+        :key="index"
+        class="star star--colored"
+      ></span>
+    </div>
   </div>
 </template>
 
@@ -12,13 +19,18 @@
 export default {
   name: "StarRating",
   props: {
-    raiting: {
+    rating: {
       type: Number,
       default: 0,
     },
     starLimit: {
       type: Number,
       default: 5,
+    },
+  },
+  computed: {
+    raitingWidth() {
+      return (this.rating / this.starLimit) * 100 + "%";
     },
   },
 };
@@ -28,7 +40,8 @@ export default {
 .star-rating {
   position: relative;
   display: inline-flex;
-  &__fullfilled {
+
+  &__colored {
     display: inline-block;
     position: absolute;
     width: 0;
@@ -44,9 +57,11 @@ export default {
   height: 16px;
   margin: 0 3px;
   flex-shrink: 0;
+
   &--colored {
     background: url("/img/star-yellow.svg") center no-repeat;
   }
+
   &--outlined {
     background: url("/img/star-outlined.svg") center no-repeat;
   }
