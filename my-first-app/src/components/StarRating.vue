@@ -1,15 +1,30 @@
 <template>
-  <div class="star-rating">
+  <!--  <div class="star-rating">
     <span
+      class="star star--outlined"
       v-for="index in starLimit"
       :key="index"
-      class="star star--outlined"
     ></span>
-    <div class="star-rating__colored" :style="`width: ${raitingWidth};`">
+    <div class="star-rating__colored" :style="`width: ${ratingWidth};`">
       <span
+        class="star star--colored"
         v-for="index in starLimit"
         :key="index"
+      ></span>
+    </div>
+  </div> -->
+
+  <div class="star-rating">
+    <span
+      class="star star--outlined"
+      v-for="index in starLimit"
+      :key="index"
+    ></span>
+    <div class="star-rating__colored" :style="ratingWidthStyle">
+      <span
         class="star star--colored"
+        v-for="index in starLimit"
+        :key="index"
       ></span>
     </div>
   </div>
@@ -29,8 +44,11 @@ export default {
     },
   },
   computed: {
-    raitingWidth() {
-      return (this.rating / this.starLimit) * 100 + "%";
+    ratingWidth() {
+      return (this.rating / this.starLimit) * 100;
+    },
+    ratingWidthStyle() {
+      return `width: ${this.ratingWidth}%;`;
     },
   },
 };
@@ -40,7 +58,6 @@ export default {
 .star-rating {
   position: relative;
   display: inline-flex;
-
   &__colored {
     display: inline-block;
     position: absolute;
@@ -51,17 +68,16 @@ export default {
     overflow: hidden;
   }
 }
+
 .star {
   display: inline-block;
   width: 16px;
   height: 16px;
-  margin: 0 3px;
+  margin: 0 4px;
   flex-shrink: 0;
-
   &--colored {
     background: url("/img/star-yellow.svg") center no-repeat;
   }
-
   &--outlined {
     background: url("/img/star-outlined.svg") center no-repeat;
   }
