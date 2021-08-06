@@ -5,18 +5,21 @@
     <!--     <Button v-on:click="amountClicks += 1">Click me</Button> -->
     <Button @click="increment" outlined>Click me</Button>
     <DirectivesTest />
+    <StarRating />
   </div>
 </template>
 
 <script>
 import Button from "./components/Button.vue";
 import DirectivesTest from "./components/DirectivesTest";
+import StarRating from "./components/StarRating";
 
 export default {
   name: "App",
   components: {
     Button,
     DirectivesTest,
+    StarRating,
   },
   data() {
     return {
