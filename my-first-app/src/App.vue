@@ -1,24 +1,22 @@
 <template>
   <div :id="$style.app">
-    <ApartmentsItem
-      :descr="apartment.descr"
-      :price="apartment.price"
-      :rating="apartment.rating"
-      imgSrc="https://cdn.pixabay.com/photo/2021/07/16/18/28/czech-republic-6471576_960_720.jpg"
-    />
+    <ApartmentsList :items="apartments" />
   </div>
 </template>
 
 <script>
-import ApartmentsItem from "./components/apartment/ApartmentsItem";
+import ApartmentsList from "./components/apartment/ApartmentsList";
+import apartments from "./components/apartment/apartments";
+
 export default {
   name: "App",
   components: {
-    ApartmentsItem,
+    ApartmentsList,
   },
   data() {
     return {
-      apartment: {
+      apartments,
+      /*   apartment: {
         id: "1232123",
         title: " lkf slfk sdlk jslfk j",
         descr: "lkf lskf jlsakfj ñlask fjñslk fsalñkf jslñdk fñlsk fj",
@@ -32,7 +30,7 @@ export default {
           phone: "2323 2323 ",
           email: "email@gmail.com",
         },
-      },
+      }, */
     };
   },
 };

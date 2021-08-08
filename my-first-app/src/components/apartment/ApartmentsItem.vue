@@ -72,15 +72,23 @@ export default {
   }
 
   &__description {
+    max-width: 180px;
     margin-bottom: 20px;
+    max-height: calc(1em * 1.4 * 3);
+    //1.4 line-height
+    // 3 => quantity of lines
+    overflow: hidden;
   }
+
   &__rating {
     margin-bottom: 20px;
   }
+
   &__price {
     font-size: 20px;
     font-weight: 600;
   }
+
   &__photo {
     position: absolute;
     top: 0;
