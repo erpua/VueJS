@@ -49,6 +49,7 @@ export default {
   position: relative;
   max-width: 300px;
   padding: 0 20px;
+  margin-bottom: 30px;
 
   &__inner {
     position: relative;
@@ -56,7 +57,7 @@ export default {
 
   &__content {
     position: relative;
-    padding: 20px;
+    padding: 15px;
     opacity: 0;
     transition: opacity 0.4s;
     background: rgba(#0f1d2d, 0.7);

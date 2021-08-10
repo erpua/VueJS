@@ -15,7 +15,22 @@ export default {
   },
   data() {
     return {
-      amountClicks: 0,
+      apartments,
+      /*   apartment: {
+        id: "1232123",
+        title: " lkf slfk sdlk jslfk j",
+        descr: "lkf lskf jlsakfj ñlask fjñslk fsalñkf jslñdk fñlsk fj",
+        price: 2032,
+        rating: 4.5,
+        location: {
+          city: "Tokyo",
+        },
+        owner: {
+          name: "Elen",
+          phone: "2323 2323 ",
+          email: "email@gmail.com",
+        },
+      }, */
     };
   },
   computed: {

@@ -1,36 +1,34 @@
 <template>
   <div :id="$style.app">
-    <ApartmentsList :items="apartments" />
+    <ApartmentsList :items="apartments">
+      <template v-slot:title>New title</template>
+      <template v-slot:apartment="{ apartment }">
+        <ApartmentsItem
+          :key="apartment.id"
+          :descr="apartment.descr"
+          :rating="apartment.rating"
+          :imgSrc="apartment.imgUrl"
+          :price="apartment.price"
+        />
+      </template>
+    </ApartmentsList>
   </div>
 </template>
 
 <script>
 import ApartmentsList from "./components/apartment/ApartmentsList";
+import ApartmentsItem from "./components/apartment/ApartmentsItem";
 import apartments from "./components/apartment/apartments";
 
 export default {
   name: "App",
   components: {
     ApartmentsList,
+    ApartmentsItem,
   },
   data() {
     return {
       apartments,
-      /*   apartment: {
-        id: "1232123",
-        title: " lkf slfk sdlk jslfk j",
-        descr: "lkf lskf jlsakfj ñlask fjñslk fsalñkf jslñdk fñlsk fj",
-        price: 2032,
-        rating: 4.5,
-        location: {
-          city: "Tokyo",
-        },
-        owner: {
-          name: "Elen",
-          phone: "2323 2323 ",
-          email: "email@gmail.com",
-        },
-      }, */
     };
   },
 };
