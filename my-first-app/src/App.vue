@@ -1,7 +1,17 @@
 <template>
   <div :id="$style.app">
+    <h2>{{ text }}</h2>
+    <!-- two way data binding -->
+    <!-- <input type="text" v-model="text" /> -->
+    <!--  <input
+      type="text"
+      :v-value="text"
+      @input="(event) => (text = event.target.value)"
+    /> -->
+    <!--  -->
+    <CustomInput v-model="text" />
     <ApartmentsList :items="apartments">
-      <template v-slot:title>New title</template>
+      <!--   <template v-slot:title>New title</template> -->
       <template v-slot:apartment="{ apartment }">
         <ApartmentsItem
           :key="apartment.id"
@@ -9,6 +19,7 @@
           :rating="apartment.rating"
           :imgSrc="apartment.imgUrl"
           :price="apartment.price"
+          @click.native="handleItemClick"
         />
       </template>
     </ApartmentsList>
@@ -18,6 +29,7 @@
 <script>
 import ApartmentsList from "./components/apartment/ApartmentsList";
 import ApartmentsItem from "./components/apartment/ApartmentsItem";
+import CustomInput from "./components/shared/CustomInput";
 import apartments from "./components/apartment/apartments";
 
 export default {
@@ -25,11 +37,18 @@ export default {
   components: {
     ApartmentsList,
     ApartmentsItem,
+    CustomInput,
   },
   data() {
     return {
+      text: "",
       apartments,
     };
+  },
+  methods: {
+    handleItemClick() {
+      console.log("item click");
+    },
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <Container>
-    <slot name="title"></slot>
+    <!--  <slot name="title"></slot> -->
     <div class="apartments-list">
       <!-- scoped slot -->
       <template v-for="apartment in items">

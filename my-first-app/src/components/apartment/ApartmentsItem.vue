@@ -1,4 +1,54 @@
 <template>
+  <!--  <div class="apartments-item" @click="log(2)">
+    <div class="apartments-item__inner">
+      <img :src="imgSrc" alt="" class="apartments-item__photo" />
+      <div class="apartments-item__content">
+        <p class="apartments-item__description">
+          {{ descr }}
+        </p>
+        <div class="apartments-item__rating">
+          <StarRating :rating="rating" />
+        </div>
+        <div class="apartments-item__price">UAH {{ price }}</div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="apartments-item" @click="log(2, $event)">
+    <div class="apartments-item__inner">
+      <img :src="imgSrc" alt="" class="apartments-item__photo" />
+      <div class="apartments-item__content">
+        <p class="apartments-item__description">
+          {{ descr }}
+        </p>
+        <div class="apartments-item__rating">
+          <StarRating :rating="rating" />
+        </div>
+        <div class="apartments-item__price">UAH {{ price }}</div>
+        <a href="https://facebook.com" @click.prevent.stop="handleLinkClick"
+          >facebook</a
+        >
+      </div>
+    </div>
+  </div> -->
+  <!-- emitting click from child to parent -->
+  <!-- <div class="apartments-item" @click="$emit('click')">
+    <div class="apartments-item__inner">
+      <img :src="imgSrc" alt="" class="apartments-item__photo" />
+      <div class="apartments-item__content">
+        <p class="apartments-item__description">
+          {{ descr }}
+        </p>
+        <div class="apartments-item__rating">
+          <StarRating :rating="rating" />
+        </div>
+        <div class="apartments-item__price">UAH {{ price }}</div>
+        <a href="https://facebook.com" @click.prevent.stop="handleLinkClick"
+          >facebook</a
+        >
+      </div>
+    </div>
+  </div> -->
+  <!--  -->
   <div class="apartments-item">
     <div class="apartments-item__inner">
       <img :src="imgSrc" alt="" class="apartments-item__photo" />
@@ -10,6 +60,9 @@
           <StarRating :rating="rating" />
         </div>
         <div class="apartments-item__price">UAH {{ price }}</div>
+        <a href="https://facebook.com" @click.prevent.stop="handleLinkClick"
+          >facebook</a
+        >
       </div>
     </div>
   </div>
@@ -39,6 +92,18 @@ export default {
     imgSrc: {
       type: String,
       default: "",
+    },
+  },
+  methods: {
+    /*  log(index) {
+      console.log(index);
+    }, */
+    log(index, event) {
+      console.log(index);
+      console.log(event);
+    },
+    handleLinkClick() {
+      console.log("facebook clicked");
     },
   },
 };
