@@ -1,17 +1,9 @@
 <template>
   <div :id="$style.app">
     <h2>{{ text }}</h2>
-    <!-- two way data binding -->
-    <!-- <input type="text" v-model="text" /> -->
-    <!--  <input
-      type="text"
-      :v-value="text"
-      @input="(event) => (text = event.target.value)"
-    /> -->
-    <!--  -->
+    <CustomSelect :items="['name', 'label', 'salary']" />
     <CustomInput v-model="text" />
     <ApartmentsList :items="apartments">
-      <!--   <template v-slot:title>New title</template> -->
       <template v-slot:apartment="{ apartment }">
         <ApartmentsItem
           :key="apartment.id"
@@ -30,11 +22,13 @@
 import ApartmentsList from "./components/apartment/ApartmentsList";
 import ApartmentsItem from "./components/apartment/ApartmentsItem";
 import CustomInput from "./components/shared/CustomInput";
+import CustomSelect from "./components/shared/CustomSelect";
 import apartments from "./components/apartment/apartments";
 
 export default {
   name: "App",
   components: {
+    CustomSelect,
     ApartmentsList,
     ApartmentsItem,
     CustomInput,

@@ -44,6 +44,34 @@ export default {
     },
   },
 };
+
+/* <template>
+  <div :id="$style.app">
+    <h2>{{ text }}</h2>
+    <!-- two way data binding -->
+    <!-- <input type="text" v-model="text" /> -->
+    <!--  <input
+      type="text"
+      :v-value="text"
+      @input="(event) => (text = event.target.value)"
+    /> -->
+    <!--  -->
+    <CustomInput v-model="text" />
+    <ApartmentsList :items="apartments">
+      <!--   <template v-slot:title>New title</template> -->
+      <template v-slot:apartment="{ apartment }">
+        <ApartmentsItem
+          :key="apartment.id"
+          :descr="apartment.descr"
+          :rating="apartment.rating"
+          :imgSrc="apartment.imgUrl"
+          :price="apartment.price"
+          @click.native="handleItemClick"
+        />
+      </template>
+    </ApartmentsList>
+  </div>
+</template> */
 </script>
 
 <style module>

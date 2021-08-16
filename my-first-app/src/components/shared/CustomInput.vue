@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/varables.scss";
+@import "../../assets/scss/variables.scss";
 
 .custom-input {
   min-height: 40px;
