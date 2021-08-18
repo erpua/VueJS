@@ -5,14 +5,14 @@
 
 <script>
 export default {
-  name: "CustomInput",
+  name: 'CustomInput',
   computed: {
     listeners() {
       return {
         ...this.$listeners,
         //rewrite the input event
         //emit input and return it's value
-        input: (event) => this.$emit("input", event.target.value),
+        input: (event) => this.$emit('input', event.target.value),
       };
     },
   },
@@ -20,14 +20,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/variables.scss";
+@import '../../assets/scss/variables.scss';
 
 .custom-input {
   min-height: 40px;
+  max-width: 220px;
+  width: 100%;
   border: 2px solid $main-color;
   font-size: 18px;
   outline: none;
   line-height: inherit;
   padding: 8 14px;
+
+  &::placeholder {
+    color: inherit;
+  }
 }
 </style>

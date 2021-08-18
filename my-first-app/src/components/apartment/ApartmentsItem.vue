@@ -69,17 +69,17 @@
 </template>
 
 <script>
-import StarRating from "../StarRating.vue";
+import StarRating from '../StarRating.vue';
 
 export default {
-  name: "ApartmentsItem",
+  name: 'ApartmentsItem',
   components: {
     StarRating,
   },
   props: {
     descr: {
       type: String,
-      default: "",
+      default: '',
     },
     rating: {
       type: Number,
@@ -91,19 +91,16 @@ export default {
     },
     imgSrc: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   methods: {
-    /*  log(index) {
-      console.log(index);
-    }, */
     log(index, event) {
       console.log(index);
       console.log(event);
     },
     handleLinkClick() {
-      console.log("facebook clicked");
+      console.log('facebook clicked');
     },
   },
 };
@@ -112,7 +109,7 @@ export default {
 <style lang="scss" scoped>
 .apartments-item {
   position: relative;
-  max-width: 300px;
+  width: 33.33%;
   padding: 0 20px;
   margin-bottom: 30px;
 

@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Container from "../shared/Container.vue";
+import Container from '../shared/Container.vue';
 export default {
-  name: "ApartmentsList",
+  name: 'ApartmentsList',
   components: {
     Container,
   },

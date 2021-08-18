@@ -1,11 +1,6 @@
 <template>
   <select v-on="listeners" class="custom-select">
-    <option
-      v-for="item in formattedItems"
-      :key="item.value"
-      :value="item.value"
-      :selected="item.selected"
-    >
+    <option v-for="item in formatedItems" :key="item.value" :value="item.value">
       {{ item.label }}
     </option>
   </select>
@@ -28,13 +23,25 @@ export default {
       };
     },
 
-    formattedItems() {
+    formatedItems() {
       return this.items.map((item) => {
         return typeof item === 'object' ? item : { value: item, label: item };
       });
     },
   },
 };
+/*  formatedItems() {
+      return items.map((item) => {
+        if (typeof item === "object") {
+          return item;
+        } else {
+          return {
+            value: item,
+            label: item,
+          };
+        }
+      });
+    }, */
 </script>
 
 <style lang="scss" scoped>
@@ -48,7 +55,5 @@ export default {
   padding: 8px 16px;
   cursor: pointer;
   display: inline-block;
-  max-width: 220px;
-  width: 100%;
 }
 </style>
