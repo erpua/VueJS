@@ -5,31 +5,32 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 1500,
     location: {
-      city: 'Tokyo',
+      city: 'Odessa',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 2,
     title: 'qwe',
     imgUrl: '/img/apartments/apartment.jpg',
-    descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk',
+    descr:
+      'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk',
     rating: 4,
-    price: 123123,
+    price: 2000,
     location: {
-      city: 'Tokyo',
+      city: 'Mariupol',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 3,
@@ -37,15 +38,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 2500,
     location: {
-      city: 'Tokyo',
+      city: 'Melekino',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 4,
@@ -53,15 +54,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 3000,
     location: {
-      city: 'Tokyo',
+      city: 'Donetsk',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 5,
@@ -69,15 +70,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 3500,
     location: {
       city: 'Tokyo',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 6,
@@ -85,15 +86,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 4000,
     location: {
       city: 'Tokyo',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 7,
@@ -101,15 +102,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 4500,
     location: {
-      city: 'Tokyo',
+      city: 'Volnovaha',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 8,
@@ -117,15 +118,15 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 5000,
     location: {
-      city: 'Tokyo',
+      city: 'New York',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
   {
     id: 9,
@@ -133,14 +134,14 @@ export default [
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
-    price: 123123,
+    price: 5500,
     location: {
-      city: 'Tokyo',
+      city: 'London',
     },
     owner: {
       name: 'Bob',
       phone: '123 234 345',
-      email: 'email@gmail.com'
-    }
+      email: 'email@gmail.com',
+    },
   },
-]
+];

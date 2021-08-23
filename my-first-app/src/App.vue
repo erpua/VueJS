@@ -39,11 +39,34 @@ export default {
     return {
       text: '',
       apartments,
+      filters: {
+        city: '',
+        price: 0,
+      },
     };
   },
+  computed: {
+    filteredApartments() {
+      this.apartments;
+    },
+  },
   methods: {
-    logger(value) {
-      console.log(value, '=> form value');
+    /* filter(filters) {
+      this.filters.city =
+    }, */
+    filter({ city, price }) {
+      this.filters.city = city;
+      this.filters.price = price;
+    },
+    filterByCityName(apartments) {
+      return apartments.filter((apartment) => {
+        return apartment.location.city === this.filters.city;
+      });
+    },
+    filterByPrice(apartments) {
+      return apartments.filter((apartment) => {
+        return apartment.price === this.filters.price;
+      });
     },
   },
 };

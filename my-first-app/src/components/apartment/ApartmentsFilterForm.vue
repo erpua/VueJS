@@ -30,9 +30,14 @@ export default {
     cities() {
       return [
         { value: '', label: 'City', selected: true },
-        'London',
+        'Odessa',
+        'Mariupol',
+        'Melekino',
+        'Donetsk',
+        'Tokyo',
+        'Volnovaha',
         'New York',
-        'Paris',
+        'London',
       ];
     },
   },
