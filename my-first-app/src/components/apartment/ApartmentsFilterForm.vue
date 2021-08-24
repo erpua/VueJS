@@ -2,9 +2,9 @@
   <form class="form" @submit.prevent="handleSubmit">
     <!-- input always returns string -->
     <CustomSelect :items="cities" v-model="city" class="form__select" />
-    <CustomInput v-model="price" placeholder="Price, from" />
+    <CustomInput v-model="price" placeholder="Input price..." />
     <SubmitButton class="form__submit" type="submit">
-      Apartment choose
+      Choose apartment
     </SubmitButton>
   </form>
 </template>
