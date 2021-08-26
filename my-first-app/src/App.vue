@@ -4,6 +4,7 @@
       <AppHeader />
       <h2>{{ text }}</h2>
       <Container>
+        <router-view></router-view>
         <ApartmentsFilterForm class="apartments-filter" @submit="filter" />
       </Container>
       <Container>
@@ -77,6 +78,7 @@ export default {
         return apartment.location.city === this.filters.city;
       });
     },
+
     filterByPrice(apartments) {
       if (!this.filters.price) {
         return apartments;
