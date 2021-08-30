@@ -17,6 +17,7 @@ const routes = [
 ];
 
 /* create class VueRouter for const router */
+/* Remove # => http://localhost:8080/#/foo =>  http://localhost:8080/foo adding  mode: 'history'  */
 const router = new VueRouter({ routes, mode: 'history' });
 
 export default router;
