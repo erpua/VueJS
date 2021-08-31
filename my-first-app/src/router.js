@@ -4,6 +4,7 @@ import Foo from './pages/Foo';
 import Bar from './pages/Bar';
 import Homepage from './pages/Homepage';
 import Apartment from './pages/Apartment';
+import ErrorPage from './pages/ErrorPage';
 /* import vue route class template */
 import VueRouter from 'vue-router';
 
@@ -29,10 +30,25 @@ const routes = [
     in item case instead of apartment nothing will change
     cause now the property goes through v-bain:to={ name: 'apartment' } prop name
   }, */
+  /*  
+  
+  static routing 
   {
     path: '/item',
     component: Apartment,
     name: 'apartment',
+  }, 
+  
+  dynamic routing */
+  {
+    path: '/apartments/:id',
+    component: Apartment,
+    name: 'apartment',
+  },
+  {
+    path: '*',
+    component: ErrorPage,
+    name: 'error-page',
   },
 ];
 

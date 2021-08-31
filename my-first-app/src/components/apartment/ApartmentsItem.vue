@@ -19,7 +19,22 @@
           class="apartments-item__link"
         >
         </router-link> -->
-        <router-link :to="{ name: 'apartment' }" class="apartments-item__link">
+
+        <!-- { id:id }
+           <router-link
+          :to="{ name: 'apartment', params: { id:  } }"
+          class="apartments-item__link"
+        >
+        </router-link> -->
+
+        <router-link
+          :to="{
+            name: 'apartment',
+            params: { id: id },
+            query: { name: 'John' },
+          }"
+          class="apartments-item__link"
+        >
         </router-link>
       </div>
     </div>
@@ -35,6 +50,10 @@ export default {
     StarRating,
   },
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     descr: {
       type: String,
       default: '',

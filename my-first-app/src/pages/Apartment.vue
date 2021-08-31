@@ -11,6 +11,12 @@ export default {
   components: {
     Container,
   },
+  mounted() {
+    console.log('this.$router =>', this.$router);
+    console.log('this.$route =>', this.$route);
+    console.log('this.$route.params.is =>', this.$route.params.id);
+    console.log('this.$route.query.name =>', this.$route.query.name);
+  },
 };
 </script>
 
