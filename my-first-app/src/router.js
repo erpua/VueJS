@@ -5,6 +5,7 @@ import Bar from './pages/Bar';
 import Homepage from './pages/Homepage';
 import Apartment from './pages/Apartment';
 import ErrorPage from './pages/ErrorPage';
+
 /* import vue route class template */
 import VueRouter from 'vue-router';
 

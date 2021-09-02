@@ -27,10 +27,12 @@
         >
         </router-link> -->
 
+        <!--  params: { id: id }, -->
+
         <router-link
           :to="{
             name: 'apartment',
-            params: { id: id },
+            params: { id: identificator },
             query: { name: 'John' },
           }"
           class="apartments-item__link"
@@ -50,7 +52,7 @@ export default {
     StarRating,
   },
   props: {
-    id: {
+    identificator: {
       type: Number,
       required: true,
     },

@@ -11,7 +11,7 @@
         <template v-slot:apartment="{ apartment }">
           <ApartmentsItem
             :key="apartment.id"
-            :id="apartment.id"
+            :identificator="apartment.id"
             :descr="apartment.descr"
             :rating="apartment.rating"
             :imgSrc="apartment.imgUrl"
