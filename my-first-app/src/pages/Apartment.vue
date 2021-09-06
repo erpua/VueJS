@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <Container> <h1>ApartmentPage</h1> </Container>
-  </div>
+  <main>
+    <Container>
+      <h1>ApartmentPage</h1>
+    </Container>
+  </main>
 </template>
 
 <script>
