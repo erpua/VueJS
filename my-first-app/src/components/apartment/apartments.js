@@ -1,9 +1,9 @@
 export default [
   {
     id: 1,
-    title: 'qwe',
+    title: '111',
     imgUrl: '/img/apartments/apartment.jpg',
-    descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
+    descr: 'Apartment l description ...',
     rating: 4,
     price: 1500,
     location: {
@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 2,
-    title: 'qwe',
+    title: 'qw222e',
     imgUrl: '/img/apartments/apartment.jpg',
     descr:
       'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk fl wer f{sdñlk f{ñl fk{sdñl kf{sñk',
@@ -34,7 +34,7 @@ export default [
   },
   {
     id: 3,
-    title: 'qwe',
+    title: '333',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -50,7 +50,7 @@ export default [
   },
   {
     id: 4,
-    title: 'qwe',
+    title: '4444',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -66,7 +66,7 @@ export default [
   },
   {
     id: 5,
-    title: 'qwe',
+    title: '555',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -82,7 +82,7 @@ export default [
   },
   {
     id: 6,
-    title: 'qwe',
+    title: '6666',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -98,7 +98,7 @@ export default [
   },
   {
     id: 7,
-    title: 'qwe',
+    title: '7777',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -114,7 +114,7 @@ export default [
   },
   {
     id: 8,
-    title: 'qwe',
+    title: '888',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,
@@ -130,7 +130,7 @@ export default [
   },
   {
     id: 9,
-    title: 'qwe',
+    title: '9999',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
     rating: 4,

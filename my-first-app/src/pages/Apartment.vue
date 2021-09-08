@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="apartment-page">
     <Container>
-      <h1>ApartmentPage</h1>
+      <ApartmentsMainInfo :apartment="apartment" />
     </Container>
   </main>
 </template>
@@ -9,11 +9,13 @@
 <script>
 import Container from '../components/shared/Container';
 import apartments from '../components/apartment/apartments';
+import ApartmentsMainInfo from '../components/apartment/ApartmentsMainInfo';
 
 export default {
   name: 'ApartmentPage',
   components: {
     Container,
+    ApartmentsMainInfo,
   },
   /* to choose spesific apartment through id use computed: */
   computed: {
@@ -39,4 +41,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.apartment-page {
+  padding-bottom: 55px;
+}
+</style>

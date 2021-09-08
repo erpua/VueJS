@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "StarRating",
+  name: 'StarRating',
   props: {
     rating: {
       type: Number,
@@ -76,10 +76,10 @@ export default {
   margin: 0 4px;
   flex-shrink: 0;
   &--colored {
-    background: url("/img/star-yellow.svg") center no-repeat;
+    background: url('/img/star-yellow.svg') center no-repeat;
   }
   &--outlined {
-    background: url("/img/star-outlined.svg") center no-repeat;
+    background: url('/img/star-outlined.svg') center no-repeat;
   }
 }
 </style>
