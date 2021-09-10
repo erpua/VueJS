@@ -30,3 +30,4 @@ new Vue({
 - create file router.js for routing configurations (add ones)
 - create folder pages with pages
 - in App.vue add <router-view></router-view>
+- make max-width for router to make clickable all component
