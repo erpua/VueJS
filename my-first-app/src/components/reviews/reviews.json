@@ -1,0 +1,17 @@
+[
+  {
+    "author": "Ali ba ba",
+    "content": "Note that the development build is not optimized.",
+    "rating": 4
+  },
+  {
+    "author": "Ali bu bu",
+    "content": "Comment 2: Note that the development build is not optimized.",
+    "rating": 5
+  },
+  {
+    "author": "Ali bala bala",
+    "content": "Comment 3 => Note that the development build is not optimized.",
+    "rating": 3
+  }
+]
