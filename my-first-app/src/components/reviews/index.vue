@@ -10,13 +10,14 @@
 
 <script>
 import ReviewsItem from './reviews-item';
+
 export default {
   name: 'Reviews',
   components: {
     ReviewsItem,
   },
   props: {
-    review: {
+    reviews: {
       type: Array,
       required: true,
     },

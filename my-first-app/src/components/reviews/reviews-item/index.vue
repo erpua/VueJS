@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import ReviewsHeading from '../reviews-item/ReviewsHeading';
+import ReviewsHeading from './ReviewsHeading';
+
 export default {
   name: 'ReviewsItem',
   components: {

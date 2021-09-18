@@ -2,15 +2,15 @@
   <div class="reviews-heading">
     <Avatar />
     <div class="reviews-heading__content">
-      <span class="reviews-heading__content">{{ author }}</span>
+      <span class="reviews-heading__author">{{ author }}</span>
       <Rating :rating="rating" />
     </div>
   </div>
 </template>
 
 <script>
-import Rating from '../../StarRating.vue';
-import Avatar from '../reviews-item/ReviewsAvatar';
+import Rating from '../../StarRating';
+import Avatar from './ReviewsAvatar';
 
 export default {
   name: 'ReviewsHeading',
