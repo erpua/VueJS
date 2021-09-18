@@ -4,7 +4,7 @@ export default [
     title: '111',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'Apartment l description ...',
-    rating: 4,
+    rating: 5,
     price: 1500,
     location: {
       city: 'Odessa',
@@ -37,7 +37,7 @@ export default [
     title: '333',
     imgUrl: '/img/apartments/apartment.jpg',
     descr: 'wer f{sdñlk f{ñl fk{sdñl kf{sñk fl',
-    rating: 4,
+    rating: 5,
     price: 2500,
     location: {
       city: 'Melekino',

@@ -1,19 +1,4 @@
 <template>
-  <!--  <div class="star-rating">
-    <span
-      class="star star--outlined"
-      v-for="index in starLimit"
-      :key="index"
-    ></span>
-    <div class="star-rating__colored" :style="`width: ${ratingWidth};`">
-      <span
-        class="star star--colored"
-        v-for="index in starLimit"
-        :key="index"
-      ></span>
-    </div>
-  </div> -->
-
   <div class="star-rating">
     <span
       class="star star--outlined"
@@ -58,8 +43,9 @@ export default {
 .star-rating {
   position: relative;
   display: inline-flex;
+
   &__colored {
-    display: inline-block;
+    display: inline-flex;
     position: absolute;
     width: 0;
     height: 100%;
@@ -75,6 +61,7 @@ export default {
   height: 16px;
   margin: 0 4px;
   flex-shrink: 0;
+
   &--colored {
     background: url('/img/star-yellow.svg') center no-repeat;
   }
