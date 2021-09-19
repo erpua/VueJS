@@ -22,4 +22,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.reviews-item {
+  border: 1px solid grey;
+}
+</style>
