@@ -13,5 +13,10 @@
     "author": "Ali bala bala",
     "content": "Comment 3",
     "rating": 3
+  },
+  {
+    "author": "Boris",
+    "content": "Comment positiv",
+    "rating": 5
   }
 ]
