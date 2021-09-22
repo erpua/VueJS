@@ -1,10 +1,8 @@
 <template>
-  <img
-    src="../assets/img/qwe.png"
-    width="30px"
-    height="30px"
-    alt="Go Home logo"
-  />
+  <div>
+    <img src="../assets/img/goit.png" width="50px" alt="Go Home logo" />
+    <span>home</span>
+  </div>
 </template>
 
 <script>
@@ -13,4 +11,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+span {
+  color: white;
+}
+</style>
