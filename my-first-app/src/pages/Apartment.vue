@@ -42,12 +42,23 @@ export default {
       );
     },
   },
+  beforeCreate() {
+    console.log('this.reviewsList from beforeCreate =>', this.reviewsList);
+  },
+  created() {
+    console.log('this.reviewsList from created =>', this.reviewsList);
+  },
+  beforeMount() {
+    console.log('this.$el from beforeMount => ', this.$el);
+  },
   mounted() {
-    console.log('this.$router =>', this.$router);
-    console.log('this.$route =>', this.$route);
+    console.log('this.$el from !mounted => ', this.$el);
+    /*     console.log('this.$router from mounted() =>', this.$router);
+    console.log('this.$route =>', this.$route); */
+    /*
     console.log('this.$route.params.id =>', this.$route.params.id);
     console.log('this.$route.query.name =>', this.$route.query.name);
-    console.log('this.apartment object => ', this.apartment);
+    console.log('this.apartment object => ', this.apartment); */
   },
   /* mounted() {
     console.log('this.$router =>', this.$router);
@@ -55,6 +66,12 @@ export default {
     console.log('this.$route.params.is =>', this.$route.params.id);
     console.log('this.$route.query.name =>', this.$route.query.name);
   }, */
+  beforeDestroy() {
+    console.log('this.$el from beforeDestroyed => ', this.$el);
+  },
+  destroyed() {
+    console.log('this.$el from destroyed => ', this.$el);
+  },
 };
 </script>
 
