@@ -53,7 +53,7 @@ export default {
   },
   props: {
     identificator: {
-      type: Number,
+      type: String,
       required: true,
     },
     descr: {

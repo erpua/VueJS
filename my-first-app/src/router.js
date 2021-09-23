@@ -1,7 +1,7 @@
 /* for routing configurations */
 
-import Foo from './pages/Foo';
-import Bar from './pages/Bar';
+/* import Foo from './pages/Foo';
+import Bar from './pages/Bar'; */
 import Homepage from './pages/Homepage';
 import Apartment from './pages/Apartment';
 import ErrorPage from './pages/ErrorPage';
@@ -10,14 +10,14 @@ import ErrorPage from './pages/ErrorPage';
 import VueRouter from 'vue-router';
 
 const routes = [
-  {
+  /*  {
     path: '/foo',
     component: Foo,
   },
   {
     path: '/bar',
     component: Bar,
-  },
+  }, */
   {
     path: '/',
     component: Homepage,

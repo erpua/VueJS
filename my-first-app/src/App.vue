@@ -20,6 +20,7 @@ export default {
   },
 
   /*
+http://apt-booking-api.herokuapp.com/docs/#
 
    data() {
     return {
