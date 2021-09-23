@@ -1,7 +1,6 @@
 <template>
   <div>
-    <img src="../assets/img/goit.png" width="50px" alt="Go Home logo" />
-    <span>home</span>
+    <img src="../assets/img/go-home.png" width="30px" alt="Go Home logo" />
   </div>
 </template>
 

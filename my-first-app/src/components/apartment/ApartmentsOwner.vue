@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'AparmentsOwner',
+  name: 'ApatrmentsOwner',
   props: {
     owner: {
       type: Object,

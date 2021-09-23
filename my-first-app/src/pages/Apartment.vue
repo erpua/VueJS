@@ -1,10 +1,10 @@
 <template>
   <main class="apartment-page">
     <Container>
-      <div v-if="apatrment" class="apartment-page__content">
+      <div v-if="apartment" class="apartment-page__content">
         <ApartmentsMainInfo :apartment="apartment" />
         <div class="apartment-page__additional-info">
-          <AparmentsOwner
+          <ApartmentsOwner
             class="apartment-page__owner"
             :owner="apartment.owner"
           />
@@ -19,7 +19,7 @@
 import Container from '../components/shared/Container';
 /* import apartments from '../components/apartment/apartments'; */
 import ApartmentsMainInfo from '../components/apartment/ApartmentsMainInfo';
-import AparmentsOwner from '../components/apartment/ApartmentsOwner';
+import ApartmentsOwner from '../components/apartment/ApartmentsOwner';
 import Reviews from '../components/reviews';
 import reviewsList from '../components/reviews/reviews.json';
 import { getApartmentById } from '../services/apartments.service';
@@ -29,7 +29,7 @@ export default {
   components: {
     Container,
     ApartmentsMainInfo,
-    AparmentsOwner,
+    ApartmentsOwner,
     Reviews,
   },
   data() {
