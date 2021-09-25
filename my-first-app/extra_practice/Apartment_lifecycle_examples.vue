@@ -17,6 +17,7 @@
 
 <script>
 import Container from '../components/shared/Container';
+/* import apartments from '../components/apartment/apartments'; */
 import ApartmentsMainInfo from '../components/apartment/ApartmentsMainInfo';
 import ApartmentsOwner from '../components/apartment/ApartmentsOwner';
 import Reviews from '../components/reviews';
@@ -31,16 +32,21 @@ export default {
     ApartmentsOwner,
     Reviews,
   },
-  data() {
+  /* data() {
     return {
       apartment: null,
     };
-  },
+  }, */
   /* to choose spesific apartment through id use computed: */
   computed: {
     reviewsList() {
       return reviewsList;
     },
+    /*  apartment() {
+      return apartments.find(
+        (apartment) => apartment.id === this.$route.params.id
+      );
+    }, */
   },
   async created() {
     try {
@@ -50,6 +56,36 @@ export default {
     } catch (error) {
       console.error(error);
     }
+  },
+  beforeCreate() {
+    /*     console.log('this.reviewsList from beforeCreate =>', this.reviewsList); */
+  },
+  /* created() {
+    console.log('this.reviewsList from created =>', this.reviewsList);
+  }, */
+  beforeMount() {
+    /*     console.log('this.$el from beforeMount => ', this.$el); */
+  },
+  mounted() {
+    /*     console.log('this.$el from !mounted => ', this.$el); */
+    /*     console.log('this.$router from mounted() =>', this.$router);
+    console.log('this.$route =>', this.$route); */
+    /*
+    console.log('this.$route.params.id =>', this.$route.params.id);
+    console.log('this.$route.query.name =>', this.$route.query.name);
+    console.log('this.apartment object => ', this.apartment); */
+  },
+  /* mounted() {
+    console.log('this.$router =>', this.$router);
+    console.log('this.$route =>', this.$route);
+    console.log('this.$route.params.is =>', this.$route.params.id);
+    console.log('this.$route.query.name =>', this.$route.query.name);
+  }, */
+  beforeDestroy() {
+    /*   console.log('this.$el from beforeDestroyed => ', this.$el); */
+  },
+  destroyed() {
+    /*     console.log('this.$el from destroyed => ', this.$el); */
   },
 };
 </script>
