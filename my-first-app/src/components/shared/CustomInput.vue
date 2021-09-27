@@ -1,11 +1,39 @@
 <template>
   <!-- when we add events on input in parent component => event is going to work here as well -->
-  <input v-on="listeners" class="custom-input" />
+  <div class="wrapper-input">
+    <input v-on="listeners" class="custom-input" />
+    <span v-if="!isValid" class="custom-input__error">{{ errorMessage }}</span>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'CustomInput',
+  data() {
+    return {
+      isValid: true,
+    };
+  },
+  props: {
+    value: {
+      type: String,
+      default: '',
+    },
+    errorMessage: {
+      type: String,
+      default: '',
+    },
+    rules: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  watch: {
+    value(value) {
+      this.validate(value);
+      console.log('value from watch: => ', value);
+    },
+  },
   computed: {
     listeners() {
       return {
@@ -14,6 +42,12 @@ export default {
         //emit input and return it's value
         input: (event) => this.$emit('input', event.target.value),
       };
+    },
+  },
+  methods: {
+    //going to return true or false
+    validate(value) {
+      this.isValid = this.rules.every((rule) => rule(value));
     },
   },
 };
