@@ -26,7 +26,6 @@
 <script>
 import ApartmentsList from '../components/apartment/ApartmentsList';
 import ApartmentsItem from '../components/apartment/ApartmentsItem';
-/* import apartments from '../components/apartment/apartments'; */
 import ApartmentsFilterForm from '../components/apartment/ApartmentsFilterForm';
 import Container from '../components/shared/Container';
 import { getApartmentsList } from '../services/apartments.service';
@@ -64,7 +63,7 @@ export default {
     }
   },
   methods: {
-    /* filter(filters) */
+    /* filter(filters) => destr. */
     filter({ city, price }) {
       this.filters.city = city;
       this.filters.price = price;

@@ -44,9 +44,10 @@ export default {
   },
   async created() {
     try {
-      const id = this.$route.params;
+      const { id } = this.$route.params;
       const { data } = await getApartmentById(id);
       this.apartment = data;
+      console.log('this.apartment: =>', this.apartment);
     } catch (error) {
       console.error(error);
     }
