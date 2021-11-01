@@ -2,7 +2,12 @@
   <form class="form" @submit.prevent="handleSubmit">
     <!-- input always returns string -->
     <CustomSelect :items="cities" v-model="city" class="form__select" />
-    <CustomInput v-model="price" placeholder="Input price..." />
+    <CustomInput
+      v-model="price"
+      placeholder="Price from"
+      error-message="Must be filled up"
+      :rules="[(val) => !!val]"
+    />
     <SubmitButton class="form__submit" type="submit">
       Choose apartment
     </SubmitButton>
