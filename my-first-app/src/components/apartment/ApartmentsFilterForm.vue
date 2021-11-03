@@ -2,11 +2,19 @@
   <form class="form" @submit.prevent="handleSubmit">
     <!-- input always returns string -->
     <CustomSelect :items="cities" v-model="city" class="form__select" />
+    <!-- <CustomInput
+      v-model="price"
+      type="number"
+      placeholder="Price from"
+      error-message="Must be filled up"
+      :rules="[(val) => !!val, (val) => val < 10]"
+    /> -->
+    <!-- :rules="[(val) => !!val]" => is checking if the field is empty -->
     <CustomInput
       v-model="price"
       placeholder="Price from"
       error-message="Must be filled up"
-      :rules="[(val) => !!val]"
+      :rules="[(val) => !!val, (val) => val < 10]"
     />
     <SubmitButton class="form__submit" type="submit">
       Choose apartment

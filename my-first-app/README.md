@@ -1,26 +1,5 @@
 # my-first-app
 
-## Project setup
-
-```
-npm install
-```
-
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-
-- node --version
-- npm install -g @vue/cli
-- vue --version
-- vue create my-app
-- cd my-app
-- npm run serve
-- additional: Vue VSCode Snippets
-
-FOR AXIOS:
-
-- npm i axios
-
 ### Compiles and hot-reloads for development
 
 ```
@@ -63,3 +42,28 @@ template: '<button>Click me </button>'
 })
 
 export default Button
+
+## Project setup
+
+```
+npm install
+```
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+- node --version
+- npm install -g @vue/cli
+- vue --version
+- vue create my-app
+- cd my-app
+- npm run serve
+- additional: Vue VSCode Snippets
+
+FOR AXIOS:
+
+- npm i axios
+
+# Vue properties moving
+
+- Vue moves all properties form tag, where they wrote, to root tag

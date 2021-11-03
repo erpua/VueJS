@@ -1,8 +1,20 @@
 <template>
   <!-- when we add events on input in parent component => event is going to work here as well -->
   <div class="wrapper-input">
+    <!-- <input
+      v-on="listeners"
+
+       //property $attrs
+       v-bind="$attrs" => in charge for showing all attributes that we passed to components. Otherwise the root tag will give it after adding property inheritAttrs: false, but the tag input will not show it yet
+
+      class="custom-input"
+      //class => if it's not valis, then I will add class-modificator => custom-input--error
+
+      :class="!isValid && 'custom-input--error'"
+    /> -->
     <input
       v-on="listeners"
+      v-bind="$attrs"
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
     />
@@ -18,6 +30,7 @@ export default {
       isValid: true,
     };
   },
+  inheritAttrs: false,
   props: {
     value: {
       type: String,
@@ -34,7 +47,7 @@ export default {
       default: () => [],
     },
   },
-  //in method watch we are going to watch props: value => if we have changes in value => we call method validate in order to check, if our input is valid or not
+  //in method (property) watch, we are going to watch props: value => if we have changes in it => call method validate in order to check, if our input is valid or not
   watch: {
     value(value) {
       this.validate(value);
