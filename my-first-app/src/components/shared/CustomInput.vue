@@ -2,13 +2,13 @@
   <!-- when we add events on input in parent component => event is going to work here as well -->
   <div class="wrapper-input">
     <!-- <input
-      v-on="listeners"
+      v-on="listeners" => all listeners inside of our component
 
        //property $attrs
-       v-bind="$attrs" => in charge for showing all attributes that we passed to components. Otherwise the root tag will give it after adding property inheritAttrs: false, but the tag input will not show it yet
+       v-bind="$attrs" => in charge for all attributes that we passed to child component from parent component. Otherwise the root tag will give it after adding property inheritAttrs: false, but the tag input will not show it yet
 
       class="custom-input"
-      //class => if it's not valis, then I will add class-modificator => custom-input--error
+      // :class="!isValid && 'custom-input--error'" => if it's not valid, then add class-modificator => 'custom-input--error'
 
       :class="!isValid && 'custom-input--error'"
     /> -->
@@ -18,7 +18,7 @@
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
     />
-    <span v-if="!isValid" class="custom-input__error">{{ errorMessage }}</span>
+    <span v-if="!isValid" class="custom-input__error">{{ error }}</span>
   </div>
 </template>
 
@@ -28,8 +28,10 @@ export default {
   data() {
     return {
       isValid: true,
+      error: '',
     };
   },
+  /* inheritAttrs => for input taking passed atributes form parent element */
   inheritAttrs: false,
   props: {
     value: {
@@ -66,8 +68,21 @@ export default {
   },
   methods: {
     //going to return true or false
-    validate(value) {
+    /*   validate(value) {
       this.isValid = this.rules.every((rule) => rule(value));
+    }, */
+    validate(value) {
+      this.isValid = this.rules.every((rule) => {
+        const { hasPassed, message } = rule(value);
+
+        if (!hasPassed) {
+          //this.error = message;
+          //sometimes message does not exist
+          this.error = message || this.errorMessage;
+        }
+
+        return hasPassed;
+      });
     },
   },
 };
