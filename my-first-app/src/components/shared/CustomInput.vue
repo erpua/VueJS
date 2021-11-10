@@ -13,7 +13,7 @@
       :class="!isValid && 'custom-input--error'"
     /> -->
     <input
-      v-on="listeners"
+      v-on="$listeners"
       v-bind="$attrs"
       class="custom-input"
       :class="!isValid && 'custom-input--error'"
