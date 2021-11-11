@@ -1,5 +1,5 @@
 <template>
-  <form class="form">
+  <form v-on="$listeners" class="form">
     <!-- for communicating form with inputs using provide-inject => allows difine proprties in parent component and inject them in child component -->
     <slot></slot>
   </form>
@@ -18,16 +18,22 @@ export default {
   data(){
     return {
       //reactive property inputs: []
-      inputs: []
+      inputs: [],
     }
   },
   methods: {
     registerInput(input) {
-      this.inputs.push(input)
+      this.inputs.push(input);
     },
     unRegisterInput(input) {
-      this.inputs.filter(item => item !== input)
-    }
+      this.inputs.filter(item => item !== input);
+    },
+    validate(){
+      return this.inputs.every(input => input.validate());
+    },
+    reset() {
+      return this.inputs.forEach((input) => input.reset());
+    },
   },
 };
 </script>
