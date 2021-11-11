@@ -67,3 +67,4 @@ FOR AXIOS:
 # Vue properties moving
 
 - Vue moves all properties form tag, where they wrote, to root tag
+- all inputs (start from 1) must inside form tag => for accesebility

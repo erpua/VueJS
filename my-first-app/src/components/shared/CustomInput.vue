@@ -12,6 +12,7 @@
 
       :class="!isValid && 'custom-input--error'"
     /> -->
+
     <input
       v-on="$listeners"
       v-bind="$attrs"
@@ -31,6 +32,7 @@ export default {
       error: '',
     };
   },
+  inject: ['form'], //now in custom input has access to form
   /* inheritAttrs => for input taking passed atributes form parent element */
   inheritAttrs: false,
   props: {
@@ -65,6 +67,9 @@ export default {
         input: (event) => this.$emit('input', event.target.value),
       };
     },
+  },
+  mounted() {
+    this.form.registerInput(this);
   },
   methods: {
     //going to return true or false
