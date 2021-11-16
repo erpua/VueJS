@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 
 /* import vue route class template */
 import VueRouter from 'vue-router';
+import LoginPage from './pages/Login';
 
 const routes = [
   /*  {
@@ -45,6 +46,11 @@ const routes = [
     path: '/apartments/:id',
     component: Apartment,
     name: 'apartment',
+  },
+  {
+    path: '/login',
+    component: LoginPage,
+    name: 'login-page',
   },
   {
     path: '*',

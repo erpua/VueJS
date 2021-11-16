@@ -13,23 +13,23 @@ export default {
   provide() {
     return {
       form: this,
-    }
+    };
   },
-  data(){
+  data() {
     return {
       //reactive property inputs: []
       inputs: [],
-    }
+    };
   },
   methods: {
     registerInput(input) {
       this.inputs.push(input);
     },
     unRegisterInput(input) {
-      this.inputs.filter(item => item !== input);
+      this.inputs.filter((item) => item !== input);
     },
-    validate(){
-      return this.inputs.every(input => input.validate());
+    validate() {
+      return this.inputs.every((input) => input.validate());
     },
     reset() {
       return this.inputs.forEach((input) => input.reset());

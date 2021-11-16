@@ -1,5 +1,5 @@
 <template>
-  <Form>
+  <Form @submit="handleSubmit">
     <CustomInput v-model="formData.email" name="email" />
     <CustomInput v-model="formData.password" name="password" />
   </Form>
@@ -9,23 +9,26 @@
 import Form from '../shared/form';
 import CustomInput from '../shared/CustomInput';
 
-  export default {
-    name: 'Login',
-    components: {
-      Form,
-      CustomInput
+export default {
+  name: 'Login',
+  components: {
+    Form,
+    CustomInput,
+  },
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    handleSubmit() {
+      console.log('this.formDATA =>', this.formData);
     },
-    data(){
-      return {
-        formData: {
-          email: '',
-          password: ''
-        }
-      }
-    },
-  }
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

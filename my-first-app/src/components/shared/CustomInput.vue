@@ -52,13 +52,13 @@ export default {
     },
   },
   //in method (property) watch, we are going to watch props: value => if we have changes in it => call method validate in order to check, if our input is valid or not
- /*  watch: {
+  /*  watch: {
     value(value) {
       this.validate(value);
       console.log('props value from method watch: => ', value);
     },
   }, */
-   watch: {
+  watch: {
     value() {
       this.validate();
     },
@@ -74,12 +74,13 @@ export default {
     },
   },
   mounted() {
-    if(!this.form) return;
+    if (!this.form) return;
 
     this.form.registerInput(this);
   },
-  beforeDestroy(){
-    if(!this.form) return;
+  //for preventing of information leaking => using beforeDestroy
+  beforeDestroy() {
+    if (!this.form) return;
 
     this.form.unRegisterInput(this);
   },
