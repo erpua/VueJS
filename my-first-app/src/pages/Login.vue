@@ -6,6 +6,7 @@
 
 <script>
 import LoginForm from '../components/Login';
+
 export default {
   name: 'LoginPage',
   components: {

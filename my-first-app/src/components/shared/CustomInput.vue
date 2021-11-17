@@ -32,7 +32,7 @@ export default {
       error: '',
     };
   },
-  inject: ['form'], //now in custom input has access to form
+  inject: ['form'], //after inject => in custom input exists reference to form component => has access to form
   /* inheritAttrs => for input taking passed atributes form parent element */
   inheritAttrs: false,
   props: {

@@ -19,11 +19,6 @@ const routes = [
     path: '/bar',
     component: Bar,
   }, */
-  {
-    path: '/',
-    component: Homepage,
-    name: 'homepage',
-  },
   /* {
     path: '/apartment',
     component: Apartment,
@@ -42,6 +37,11 @@ const routes = [
   }, 
   
   dynamic routing */
+  {
+    path: '/',
+    component: Homepage,
+    name: 'homepage',
+  },
   {
     path: '/apartments/:id',
     component: Apartment,
